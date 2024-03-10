@@ -1,0 +1,9 @@
+.right-items {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Para alinear verticalmente los elementos */
+}
+
+a{
+  font-size: 12px;
+}

@@ -1,0 +1,38 @@
+<div class="col-md-6" offset-md-3>
+  <h3 class="text-center">Registro de Expediente</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Asunto : </label>
+      <input type="text"
+      class="form-control"
+      id="asunto"
+      [(ngModel)]="expediente.asunto"
+      name="asunto">
+    </div>
+    <br>
+    <div class="form-group">
+      <label>Area : </label>
+      <select class="form-control" id="area" [(ngModel)]="expediente.area.idArea" name="area">
+        <option *ngFor="let area of areas" [value]="area.idArea">{{area.nombreArea}}</option>
+      </select>
+    </div>
+    <br>
+    <div class="form-group">
+      <label>Nombre del Contribuyente : </label>
+      <select class="form-control" id="contribuyente" [(ngModel)]="expediente.contribuyente" name="contribuyente">
+        <option *ngFor="let contribuyente of contribuyentes" [value]="contribuyente.idContribuyente">{{contribuyente.nombre}}</option>
+      </select>
+    </div>
+    <br>
+    <div class="form-group">
+      <label>Costo : </label>
+      <input type="text"
+      class="form-control"
+      id="costo"
+      [(ngModel)]="expediente.costo"
+      name="costo">
+    </div>
+    <br>
+    <button class="btn btn-success">Guardar</button>
+  </form>
+</div>

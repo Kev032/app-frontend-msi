@@ -1,0 +1,42 @@
+<div class="col-md-6" offset-md-3>
+  <h3 class="text-center">Registro de Contribuyentes</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Nombres : </label>
+      <input type="text"
+      class="form-control"
+      id="nombre"
+      [(ngModel)]="contribuyente.nombre"
+      name="nombre">
+    </div>
+    <br>
+    <div class="form-group">
+      <label>Dirección : </label>
+      <input type="text"
+      class="form-control"
+      id="direccion"
+      [(ngModel)]="contribuyente.direccion"
+      name="direccion">
+    </div>
+    <br>
+    <div class="form-group">
+      <label>Email : </label>
+      <input type="email"
+      class="form-control"
+      id="Email"
+      [(ngModel)]="contribuyente.email"
+      name="email">
+    </div>
+    <br>
+    <div class="form-group">
+      <label>Teléfono : </label>
+      <input type="text"
+      class="form-control"
+      id="telefono"
+      [(ngModel)]="contribuyente.telefono"
+      name="telefono">
+    </div>
+    <br>
+    <button class="btn btn-success">Guardar</button>
+  </form>
+</div>

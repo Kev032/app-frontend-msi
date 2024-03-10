@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" fxLayout="row">
+  <a [routerLink]="'/'" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>diversity_3</mat-icon>
+  </a>
+  <span>Portal de MSI</span>
+  <div class="right-items">
+    <div *ngIf="isLoggedIn">
+      <a [routerLink]="'/contribuyentes'" mat-icon-button class="example-icon favorite-icon"
+        aria-label="Contribuyentes">
+        Contribuyentes
+      </a>
+      <a [routerLink]="'/expedientes'" mat-icon-button class="example-icon favorite-icon mr20 ml70"
+        aria-label="Expedientes" >
+        Expedientes
+      </a>
+    </div>
+
+    <a *ngIf="!isLoggedIn" [routerLink]="'/login'" mat-icon-button class="example-icon favorite-icon"
+      aria-label="Iniciar sesión" style="font-size: 12px;">
+      Iniciar sesión
+    </a>
+    <a [routerLink]="'/signup'" mat-icon-button class="example-icon favorite-icon mr20 ml70"
+      aria-label="Example icon-button with heart icon" style="font-size: 12px;">
+      Registrarse
+    </a>
+  </div>
+</mat-toolbar>
